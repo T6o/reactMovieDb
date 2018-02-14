@@ -4,6 +4,7 @@ Implementazione di una web app React basata sul boilerplate NextJs composta da:
 - pagina di dettaglio film selezionato dalla lista, dove è presente anche uno slider d’immagini del film.
 - possibilità di aggiungere il film ai preferiti (salvando i preferiti in sessione, al refresh della web app i preferiti saranno vuoti)
 - pagina con l'elenco dei film preferiti
+- uso di material-ui
 
 # Exec
 npm run dev
