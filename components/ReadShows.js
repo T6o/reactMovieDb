@@ -12,16 +12,23 @@ const styles = {
     padding:'10px',
     display: 'flex',
     flexWrap: 'wrap',
-    width: '50%',
-    height:'80%',
+    width: '40%',
     marginTop: '10%',
+    background: '#cdd0d6',
     justifyContent: 'space-around',
     border: '5px solid  #e0ebeb'
+  },
+  rootT: {
+    margin: 'auto',
+    padding:'10px',
+    textAlign:'center',
+    width: '40%',
+    justifyContent: 'space-around',
   },
   gridList: {
     flexWrap: 'nowrap',
     overflowX: 'auto',
-    height:'400px'
+    height:'480px'
   },
   titleStyle: {
     color: 'rgb(0, 188, 212)',
@@ -35,18 +42,19 @@ class ReadShows extends Component {
     const items = shows.map((shows, i) => (
       shows = JSON.parse(shows),
       <Link key={i} as={`/p/${shows.id}`} href={`/post?id=${shows.id}`}>
-        <GridTile style={{border:'5px solid white',width:'300px', height:'400px', marginRight:'5px'}}
-          title={shows.title}>
-          <img  style={{width:'200px', height:'400px'}} src={shows.url}/>
-        </GridTile>
+        <ListItem style={{}}>
+          <img  style={{width:'300px'}} src={shows.url}/>
+        </ListItem>
       </Link>
     ));
 
     return (
-      <div style={styles.root}>
-        <GridList style={styles.gridList} cols={2.2}>
-          {items}
-        </GridList>
+      <div>
+        <div style={styles.root}>
+          <List style={styles.gridList} cols={2.2}>
+            {items}
+          </List>
+        </div>
       </div>
     )
   }

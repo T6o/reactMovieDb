@@ -49,7 +49,7 @@ class Post extends React.Component {
     return (
       <Layout>
           <div style={divCenter2}>
-            <img  src={url}/>
+            <img style={{marginTop:'100px'}} src={url}/>
           </div>
           <div style={divCenter}>
             <h1>{this.props.show.title}</h1>

@@ -32,7 +32,7 @@ class Shows extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div style={{marginTop: '100px'}} className="App">
         <ShowAdd findShows = {this.findShows}/>
         <ShowTable className="App-header" shows={this.state.showsM}/>
       </div>
