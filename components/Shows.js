@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component}  from 'react'
 import ShowTable from '../components/ShowTable.js'
 import ShowAdd from '../components/ShowAdd.js'
 import Link from 'next/link'
@@ -13,17 +13,17 @@ class Shows extends Component {
   }
 
   componentDidMount() {
-    let show = { title: 'Interstellar'};
+    const show = { title: 'Interstellar'};
     this.findShows(show);
   }
 
   findShows(show) {
-    fetch('https://api.themoviedb.org/3/search/movie?api_key=3151edfc05030ee1cc38ce098648f315&query='+show.title).then(response => response.json()).then(data => {
+    fetch('https://api.themoviedb.org/3/search/movie?api_key=3151edfc05030ee1cc38ce098648f315&query='+show.title)
+    .then(response => response.json())
+    .then(data => {
       if(data.results != null){
         this.setState({ showsM: data.results });
         showsM: data.result;
-      }else{
-
       }
     }).catch(err => {
       console.log(err);
@@ -38,7 +38,6 @@ class Shows extends Component {
       </div>
     )
   }
-
 }
 
 export default Shows

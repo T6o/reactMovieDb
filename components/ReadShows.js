@@ -18,21 +18,11 @@ const styles = {
     justifyContent: 'space-around',
     border: '5px solid  #e0ebeb'
   },
-  rootT: {
-    margin: 'auto',
-    padding:'10px',
-    textAlign:'center',
-    width: '40%',
-    justifyContent: 'space-around',
-  },
   gridList: {
     flexWrap: 'nowrap',
     overflowX: 'auto',
     height:'480px'
-  },
-  titleStyle: {
-    color: 'rgb(0, 188, 212)',
-  },
+  }
 };
 
 class ReadShows extends Component {
@@ -42,7 +32,7 @@ class ReadShows extends Component {
     const items = shows.map((shows, i) => (
       shows = JSON.parse(shows),
       <Link key={i} as={`/p/${shows.id}`} href={`/post?id=${shows.id}`}>
-        <ListItem style={{}}>
+        <ListItem >
           <img  style={{width:'300px'}} src={shows.url}/>
         </ListItem>
       </Link>

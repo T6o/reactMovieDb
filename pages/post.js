@@ -5,16 +5,6 @@ import { bindActionCreators } from 'redux'
 import { initStore, addShow } from '../store'
 import withRedux from 'next-redux-wrapper'
 
-const showStyle = {
-  textAlign: 'center',
-}
-
-const imgStyle = {
-  border: '3px solid green',
-  padding: '50px',
-  float: 'right',
-}
-
 const divCenter = {
   margin: 'auto',
   width: '80%',
@@ -26,13 +16,6 @@ const divCenter2 = {
   margin: 'auto',
   width: '200px',
   padding: '10px'
-}
-
-const textStyle = {
-  border: '3px solid green',
-  padding: '10px',
-  float: 'left',
-  width: '50%',
 }
 
 class Post extends React.Component {
@@ -71,7 +54,7 @@ Post.getInitialProps = async function (context) {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    addShow: bindActionCreators(addShow, dispatch),
+    addShow: bindActionCreators(addShow, dispatch)
   }
 }
 

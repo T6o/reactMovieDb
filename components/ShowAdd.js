@@ -32,10 +32,6 @@ class ShowAdd extends Component {
     });
   }
 
-  componentDidMount() {
-    var form = document.forms.findShow;
-  }
-
   render() {
     return (
       <div style={formStyle}>

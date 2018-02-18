@@ -16,7 +16,6 @@ class ShowRow extends Component {
             <TableRowColumn><img style={{width: '20px'}}src = {"http://image.tmdb.org/t/p/w185//"+show.poster_path} /></TableRowColumn>
             <TableRowColumn>{show.title}</TableRowColumn>
             <TableRowColumn>{show.release_date}</TableRowColumn>
-
         </TableRow>
       </Link>
     )

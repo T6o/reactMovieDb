@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { initStore } from '../store'
 import withRedux from 'next-redux-wrapper'
 
-const Index = (props) => (
+const Index = props => (
   <div>
     <Layout>
       <Shows/>
@@ -12,4 +12,4 @@ const Index = (props) => (
   </div>
 )
 
-export default withRedux(initStore, null, null)(Index)
+export default withRedux(initStore)(Index)

@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux'
 import { initStore, addShow } from '../store'
 import withRedux from 'next-redux-wrapper'
 
-const About = (props) => (
+const About = props => (
   <Layout>
     <ReadShows />
   </Layout>
