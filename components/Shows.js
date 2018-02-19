@@ -20,10 +20,10 @@ class Shows extends Component {
   findShows(show) {
     fetch('https://api.themoviedb.org/3/search/movie?api_key=3151edfc05030ee1cc38ce098648f315&query='+show.title)
     .then(response => response.json())
-    .then(data => {
-      if(data.results != null){
-        this.setState({ showsM: data.results });
-        showsM: data.result;
+    .then(response => {
+      if(response.results != null){
+        this.setState({ showsM: response.results });
+        showsM: response.result;
       }
     }).catch(err => {
       console.log(err);

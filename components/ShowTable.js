@@ -19,7 +19,6 @@ const divCenter = {
 }
 class ShowTable extends Component {
   render() {
-
     const showRows = this.props.shows.map(show => <ShowRow key={show.id} show={show} />);
     return(
       <div style={divCenter}>
